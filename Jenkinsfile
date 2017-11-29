@@ -15,7 +15,7 @@ node {
         parameters([
             string(defaultValue: 'value', description: '', name: 'KEY'),
             string(defaultValue: 'value', description: '', name: 'KEY2'),
-            boolean(defaultValue: false, description: '', name: 'FAIL')
+            booleanParam(defaultValue: false, description: '', name: 'FAIL')
         ])
     ]) {
         stage('Test') {
