@@ -14,13 +14,17 @@ node {
     withDefaults([
         parameters([
             string(defaultValue: 'value', description: '', name: 'KEY'),
-            string(defaultValue: 'value', description: '', name: 'KEY2')
+            string(defaultValue: 'value', description: '', name: 'KEY2'),
+            boolean(defaultValue: false, description: '', name: 'FAIL')
         ])
     ]) {
         stage('Test') {
             echo params.KEY
             echo params.KEY2
-            throw params
+            
+            if (params.FAIL) {
+                throw params
+            }
         }
     }
 }
