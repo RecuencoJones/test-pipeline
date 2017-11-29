@@ -7,6 +7,9 @@ node {
         properties([
           parameters([string(defaultValue: 'value', description: '', name: 'KEY')])
         ])
+        properties([
+          parameters([string(defaultValue: 'value', description: '', name: 'KEY2')])
+        ])
 
         stage('Test') {
           echo params.KEY
