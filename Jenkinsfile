@@ -5,7 +5,8 @@ def withDefaults(props = [], body) {
     
     try {
         body()
-    } catch(Exception ignored) {
+    } catch(Exception e) {
+        echo e
         currentBuild.result = 'FAILURE'
     }
 }
