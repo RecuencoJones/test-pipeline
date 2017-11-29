@@ -20,6 +20,7 @@ node {
         stage('Test') {
             echo params.KEY
             echo params.KEY2
+            throw
         }
     }
 }
