@@ -4,7 +4,7 @@ def withDefaults(props = [], body) {
     properties(props)
     
     try {
-    
+        body()
     } catch(Exception ignored) {
         currentBuild.result = 'FAILURE'
     }
